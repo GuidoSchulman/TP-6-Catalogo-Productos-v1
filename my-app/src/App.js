@@ -1,28 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/header.js';
-import PerfectShoe from './components/perfectShoe';
-import FeaturedProducts from './components/featuredProducts';
-import Footer from './components/footer';
+import logo from "./logo.svg";
+import "./App.css";
+import { Route,BrowserRouter,Routes } from "react-router-dom";
+import Layout from "./pages/layout";
+import Home from "./pages/Home";
+/*import Home from "./components/Home";
+import Nosotros from "./components/Nosotros";
+import Contacto from "./components/Contacto";*/
 function App() {
-  return (
-    <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
-     
-    
-  <Header></Header>
-  <PerfectShoe></PerfectShoe>
-  <FeaturedProducts></FeaturedProducts>
-  <Footer></Footer>
+  return (<>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+     <Route index element={<Home />}></Route>
 
-  
-
-  
-
-  
-
-  
-
-    </body>
+</Route>
+    </Routes>
+  </BrowserRouter>
+  </>
     
   );
 }

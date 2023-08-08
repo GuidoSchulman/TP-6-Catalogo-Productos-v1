@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default function Header() {
   return (
     <div>
-      <div class="site-wrap"><div class="site-mobile-menu"><div class="site-mobile-menu-header"><div class="site-mobile-menu-logo"><a href="index.html" class="js-logo-clone">Shoppers</a></div><div class="site-mobile-menu-close "><span class="ion-ios-close js-menu-toggle"></span></div></div><div class="site-mobile-menu-body"><ul class="site-nav-wrap">
+      <div class="site-wrap"><div class="site-mobile-menu"><div class="site-mobile-menu-header"><div class="site-mobile-menu-logo"><a href="/" class="js-logo-clone">Shoppers</a></div><div class="site-mobile-menu-close "><span class="ion-ios-close js-menu-toggle"></span></div></div><div class="site-mobile-menu-body"><ul class="site-nav-wrap">
           <li class="has-children active"><span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-            <a href="index.html">Home</a>
+            <Link to='/home'>Home</Link>
             <ul class="collapse" id="collapseItem0">
               <li><a href="#">Menu One</a></li>
               <li><a href="#">Menu Two</a></li>
@@ -47,7 +47,7 @@ export default function Header() {
 
           <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone">Shoppers</a>
+              <a href="/" class="js-logo-clone">Shoppers</a>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export default function Header() {
       <div class="container">
         <ul class="site-menu js-clone-nav d-none d-md-block">
           <li class="has-children active">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <ul class="dropdown">
               <li><a href="#">Menu One</a></li>
               <li><a href="#">Menu Two</a></li>
