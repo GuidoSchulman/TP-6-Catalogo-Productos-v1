@@ -15,12 +15,12 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
      <Route index element={<Home />}></Route>
-    
-
-</Route>
-<Route path = "/shop" element={<Shop/>}></Route>
+     <Route path = "/shop" element={<Shop/>}></Route>
 <Route path = "/shop_single" element={<Shop_Single/>}></Route>
 <Route path = "/contacto" element={<Contacto/>}></Route>
+
+</Route>
+
     </Routes>
   </BrowserRouter>
   </>

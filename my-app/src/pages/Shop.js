@@ -10,7 +10,7 @@ function Shop(props) {
     <div>
         <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
 
-<Header></Header>
+
   <div class="site-section">
     <div class="container">
     <Filter></Filter>
@@ -26,7 +26,6 @@ function Shop(props) {
     </div>
   </div>
 
-  <Footer></Footer>
 
 </body>
 

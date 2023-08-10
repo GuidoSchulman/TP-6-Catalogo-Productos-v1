@@ -7,9 +7,9 @@ function Shop_Single(props) {
   return (
     <>
     <body>
-    <Header></Header>
+
     <InfoRopa></InfoRopa>
-    <Footer></Footer>
+   
     </body>
     </>
   )
