@@ -93,7 +93,7 @@ export default function Header() {
           <li><Link to='/shop'>Shop</Link>  </li>
           
           
-          <li><a href="contact.html">Contact</a></li>
+          <li><Link to='/contacto'>Contact</Link></li>
         </ul>
       </div>
     </nav>
