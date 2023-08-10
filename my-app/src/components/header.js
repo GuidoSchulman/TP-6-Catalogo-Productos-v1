@@ -28,7 +28,7 @@ export default function Header() {
               <li><a href="#">Menu Three</a></li>
             </ul>
           </li>
-          <li><a href="shop.html">Shop</a></li>
+          <li><Link to='/shop'>Shop</Link></li>
           <li><a href="#">Catalogue</a></li>
           <li><a href="#">New Arrivals</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -90,7 +90,7 @@ export default function Header() {
             </ul>
           </li>
           
-          <li><a href="shop.html">Shop</a></li>
+          <li><Link to='/shop'>Shop</Link>  </li>
           
           
           <li><a href="contact.html">Contact</a></li>
