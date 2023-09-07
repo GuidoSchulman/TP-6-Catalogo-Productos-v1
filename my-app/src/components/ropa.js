@@ -1,43 +1,44 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { CategoriaContext } from "./filter2";
 
 export default function Ropa() {
   const [products, setProducts] = useState([]);
-  const selectedCategory = useContext(CategoriaContext);
-  console.log(selectedCategory);
-  if (selectedCategory != null) {
-    products.length = 0;
-    axios
-      .get("https://dummyjson.com/products/category/" + selectedCategory)
-      .then(function (response) {
-        setProducts(response.data.products);
-        console.log(response.data.products);
-      }, [])
-      .catch(function (error) {
-        console.error("Error fetching data:", error);
-      });
-    
-  } else {
-    axios
-      .get("https://dummyjson.com/products")
-      .then(function (response) {
-        setProducts(response.data.products);
-        console.log(response.data.products);
-      }, [])
-      .catch(function (error) {
-        console.error("Error fetching data:", error);
-      });
-  }
+  const {selectedCategory} = useContext(CategoriaContext);
+
+  useEffect(() => {
+    if (selectedCategory != null) {
+      axios
+        .get("https://dummyjson.com/products/category/" + selectedCategory)
+        .then(function (response) {
+          setProducts(response.data.products);
+          console.log(response.data.products);
+        })
+        .catch(function (error) {
+          console.error("Error fetching data:", error);
+        });
+    } else {
+      axios
+        .get("https://dummyjson.com/products")
+        .then(function (response) {
+          setProducts(response.data.products);
+          console.log(response.data.products);
+        })
+        .catch(function (error) {
+          console.error("Error fetching data:", error);
+        });
+    }
+  }, [selectedCategory]);
 
   console.log(products);
+
   if (products == null) {
     return <div>Loading...</div>;
   } else {
     return (
       <>
-        <div className="row mb-5" id="todo">
+        <div className="row mb-5">
           {products.map((element) => (
             <div
               key={element.id}
