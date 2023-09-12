@@ -57,7 +57,7 @@ export default function Ropa() {
                 </figure>
                 <div className="block-4-text p-4">
                   <h3>
-                    <Link to="/Shop_Single">{element.title}</Link>
+                    <Link to={"/Shop_Single/"+ element.id}   >{element.title}</Link>
                   </h3>
                   <p className="mb-0">{element.description}</p>
                   <p className="text-primary font-weight-bold">
