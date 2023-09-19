@@ -7,6 +7,7 @@ import Shop from "./pages/Shop";
 import Shop_Single from "./pages/Shop_Single";
 import Contacto from "./pages/Contacto";
 import CategoriaProvider from "./components/Context/CategoriaContext";
+import Cart from "./pages/Cart";
 /*import Home from "./components/Home";
 import Nosotros from "./components/Nosotros";
 import Contacto from "./components/Contacto";*/
@@ -20,6 +21,7 @@ function App() {
             <Route path="/shop" element={<Shop />}></Route>
             <Route path={"/shop_single/:id"} element={<Shop_Single />}></Route>
             <Route path="/contacto" element={<Contacto />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
