@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
+import { CarritoContext } from './ropa';
 
 export default function OrderSummary() {
+ const{RopaSeleccionada}=useContext(CarritoContext)
   return (
     <div className="row mb-5">
       <div className="col-md-12">

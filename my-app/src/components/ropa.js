@@ -2,11 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { CategoriaContext } from "./filter2";
+import { CarritoContext } from "./Context/CarritoContext";
 
 export default function Ropa() {
   const [products, setProducts] = useState([]);
   const {selectedCategory} = useContext(CategoriaContext);
-
+  const{RopaSeleccionada}=useContext(CarritoContext)
   useEffect(() => {
     if (selectedCategory != null) {
       axios
@@ -72,3 +73,4 @@ export default function Ropa() {
     );
   }
 }
+export {CarritoContext };
