@@ -12,8 +12,11 @@ import Checkout from "./pages/Checkout";
 /*import Home from "./components/Home";
 import Nosotros from "./components/Nosotros";
 import Contacto from "./components/Contacto";*/
+import CarritoProvider from "./components/Context/CarritoContext";
+
 function App() {
   return (
+    <CarritoProvider>
     <CategoriaProvider>
       <BrowserRouter>
         <Routes>
@@ -28,6 +31,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </CategoriaProvider>
+    </CarritoProvider>
   );
 }
 

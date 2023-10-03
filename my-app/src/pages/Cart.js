@@ -1,6 +1,6 @@
 import Header from "../components/header.js";
 import Tabla from "../components/tabla.js";
-import Cupon from "../components/cupon.js";
+
 import Recuento from "../components/recuento.js";
 function Cart(props) {
   return (
@@ -22,7 +22,7 @@ function Cart(props) {
                 </button>
               </div>
             </div>
-            <Cupon></Cupon>
+           
             <br></br>
             <Recuento></Recuento>
           </div>

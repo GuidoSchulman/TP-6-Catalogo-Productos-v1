@@ -7,7 +7,7 @@ import { CarritoContext } from "./Context/CarritoContext";
 export default function Ropa() {
   const [products, setProducts] = useState([]);
   const {selectedCategory} = useContext(CategoriaContext);
-  const{RopaSeleccionada}=useContext(CarritoContext)
+ 
   useEffect(() => {
     if (selectedCategory != null) {
       axios
@@ -48,7 +48,7 @@ export default function Ropa() {
             >
               <div className="block-4 text-center border">
                 <figure className="block-4-image">
-                  <Link to="/Shop_Single">
+                  <Link to={"/shop_single" + element.id}>
                     <img
                       src={element.thumbnail}
                       alt="placeholder"
@@ -58,7 +58,7 @@ export default function Ropa() {
                 </figure>
                 <div className="block-4-text p-4">
                   <h3>
-                    <Link to={"/Shop_Single/"+ element.id}   >{element.title}</Link>
+                    <Link to={"/shop_single/"+ element.id}   >{element.title}</Link>
                   </h3>
                   <p className="mb-0">{element.description}</p>
                   <p className="text-primary font-weight-bold">

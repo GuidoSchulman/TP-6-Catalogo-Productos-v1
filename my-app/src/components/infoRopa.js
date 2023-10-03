@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { CarritoContext } from '../components/Context/CarritoContext';
 
-export default function infoRopa(product) {
+export default function InfoRopa({ product }) {
+  console.log(product);
+  const { setRopaSeleccionada } = useContext(CarritoContext);
+
+  const AñadirACarrito = function () {
+    setRopaSeleccionada(product);
+  };
+
   return (
     <div><div class="site-section">
     <div class="container">
@@ -39,7 +47,7 @@ export default function infoRopa(product) {
           </div>
 
           </div>
-          <p><a href="cart.html" class="buy-now btn btn-sm btn-primary">Add To Cart</a></p>
+          <p><a href="cart.html" class="buy-now btn btn-sm btn-primary" onClick={AñadirACarrito}></a></p>
 
         </div>
       </div>
