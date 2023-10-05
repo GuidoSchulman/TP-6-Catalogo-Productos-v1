@@ -9,7 +9,8 @@ console.log(RopaSeleccionada);
   }, []);
 
   return (
-    <CarritoContext.Provider value={{ RopaSeleccionada, setRopaSeleccionada }}>
+    <CarritoContext.Provider 
+    value={{ RopaSeleccionada, setRopaSeleccionada }}>
       {props.children}
     </CarritoContext.Provider>
   );

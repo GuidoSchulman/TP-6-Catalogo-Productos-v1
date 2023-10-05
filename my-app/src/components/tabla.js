@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CarritoContext } from './ropa'
 
 export default function Tabla() {
+  const{RopaSeleccionada}=useContext(CarritoContext)
+  console.log(RopaSeleccionada );
+  RopaSeleccionada.forEach(element => {
+    console.log(element);
+  });
   return (
-    <>
+    
+    RopaSeleccionada.forEach(item => {
+      <div>a</div>
+    })
+    /*<>
      <div className="site-section">
       <div className="container">
         <div className="row mb-5">
@@ -75,6 +85,6 @@ export default function Tabla() {
     </div>
     </div>
     </>
-   
+   */
   )
 }

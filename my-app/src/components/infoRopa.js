@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CarritoContext } from '../components/Context/CarritoContext';
 
 export default function InfoRopa({ product }) {
-  console.log(product);
+ 
   const { setRopaSeleccionada } = useContext(CarritoContext);
 
   const AñadirACarrito = function () {
