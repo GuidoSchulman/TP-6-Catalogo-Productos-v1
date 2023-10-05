@@ -3,28 +3,28 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div>
-      <div class="site-wrap">
-        <div class="site-mobile-menu">
-          <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-logo">
-              <a href="/" class="js-logo-clone">
+      <div className="site-wrap">
+        <div className="site-mobile-menu">
+          <div className="site-mobile-menu-header">
+            <div className="site-mobile-menu-logo">
+              <a href="/" className="js-logo-clone">
                 Shoppers
               </a>
             </div>
-            <div class="site-mobile-menu-close ">
-              <span class="ion-ios-close js-menu-toggle"></span>
+            <div className="site-mobile-menu-close ">
+              <span className="ion-ios-close js-menu-toggle"></span>
             </div>
           </div>
-          <div class="site-mobile-menu-body">
-            <ul class="site-nav-wrap">
-              <li class="has-children active">
+          <div className="site-mobile-menu-body">
+            <ul className="site-nav-wrap">
+              <li className="has-children active">
                 <span
-                  class="arrow-collapse collapsed"
+                  className="arrow-collapse collapsed"
                   data-toggle="collapse"
                   data-target="#collapseItem0"
                 ></span>
                 <Link to="/home">Home</Link>
-                <ul class="collapse" id="collapseItem0">
+                <ul className="collapse" id="collapseItem0">
                   <li>
                     <a href="#">Menu One</a>
                   </li>
@@ -34,14 +34,14 @@ export default function Header() {
                   <li>
                     <a href="#">Menu Three</a>
                   </li>
-                  <li class="has-children">
+                  <li className="has-children">
                     <span
-                      class="arrow-collapse collapsed"
+                      className="arrow-collapse collapsed"
                       data-toggle="collapse"
                       data-target="#collapseItem1"
                     ></span>
                     <a href="#">Sub Menu</a>
-                    <ul class="collapse" id="collapseItem1">
+                    <ul className="collapse" id="collapseItem1">
                       <li>
                         <a href="#">Menu One</a>
                       </li>
@@ -55,14 +55,14 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li class="has-children">
+              <li className="has-children">
                 <span
-                  class="arrow-collapse collapsed"
+                  className="arrow-collapse collapsed"
                   data-toggle="collapse"
                   data-target="#collapseItem2"
                 ></span>
                 <a href="about.html">About</a>
-                <ul class="collapse" id="collapseItem2">
+                <ul className="collapse" id="collapseItem2">
                   <li>
                     <a href="#">Menu One</a>
                   </li>
@@ -89,51 +89,51 @@ export default function Header() {
             </ul>
           </div>
         </div>
-        <header class="site-navbar" role="banner">
-          <div class="site-navbar-top">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
-                  <form action="" class="site-block-top-search">
-                    <span class="icon icon-search2"></span>
+        <header className="site-navbar" role="banner">
+          <div className="site-navbar-top">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+                  <form action="" className="site-block-top-search">
+                    <span className="icon icon-search2"></span>
                     <input
                       type="text"
-                      class="form-control border-0"
+                      className="form-control border-0"
                       placeholder="Search"
                     ></input>
                   </form>
                 </div>
 
-                <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
-                  <div class="site-logo">
-                    <a href="/" class="js-logo-clone">
+                <div className="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+                  <div className="site-logo">
+                    <a href="/" className="js-logo-clone">
                       Shoppers
                     </a>
                   </div>
                 </div>
 
-                <div class="col-6 col-md-4 order-3 order-md-3 text-right">
-                  <div class="site-top-icons">
+                <div className="col-6 col-md-4 order-3 order-md-3 text-right">
+                  <div className="site-top-icons">
                     <ul>
                       <li>
                         <a href="#">
-                          <span class="icon icon-person"></span>
+                          <span className="icon icon-person"></span>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span class="icon icon-heart-o"></span>
+                          <span className="icon icon-heart-o"></span>
                         </a>
                       </li>
                       <li>
                         <Link to="/cart">
-                          <span class="icon icon-shopping_cart"></span>
-                          <span class="count">2</span>{" "}
+                          <span className="icon icon-shopping_cart"></span>
+                          <span className="count">2</span>{" "}
                         </Link>
                       </li>
-                      <li class="d-inline-block d-md-none ml-md-0">
-                        <a href="#" class="site-menu-toggle js-menu-toggle">
-                          <span class="icon-menu"></span>
+                      <li className="d-inline-block d-md-none ml-md-0">
+                        <a href="#" className="site-menu-toggle js-menu-toggle">
+                          <span className="icon-menu"></span>
                         </a>
                       </li>
                     </ul>
@@ -143,14 +143,14 @@ export default function Header() {
             </div>
           </div>
           <nav
-            class="site-navigation text-right text-md-center"
+            className="site-navigation text-right text-md-center"
             role="navigation"
           >
-            <div class="container">
-              <ul class="site-menu js-clone-nav d-none d-md-block">
-                <li class="has-children active">
+            <div className="container">
+              <ul className="site-menu js-clone-nav d-none d-md-block">
+                <li className="has-children active">
                   <a href="/">Home</a>
-                  <ul class="dropdown">
+                  <ul className="dropdown">
                     <li>
                       <a href="#">Menu One</a>
                     </li>
@@ -160,9 +160,9 @@ export default function Header() {
                     <li>
                       <a href="#">Menu Three</a>
                     </li>
-                    <li class="has-children">
+                    <li className="has-children">
                       <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
+                      <ul className="dropdown">
                         <li>
                           <a href="#">Menu One</a>
                         </li>

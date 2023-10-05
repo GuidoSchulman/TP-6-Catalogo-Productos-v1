@@ -11,7 +11,7 @@ const CategoriaProvider = (props) => {
         axios.get('https://dummyjson.com/products/categories')
           .then(function (response) {
             setCategorias(response.data);
-            console.log(response.data);
+            //console.log(response.data);
           })
           .catch(function (error) {
             console.error("Error fetching data:", error);

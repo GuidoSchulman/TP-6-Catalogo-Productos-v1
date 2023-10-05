@@ -14,10 +14,10 @@ export default function Ropa() {
         .get("https://dummyjson.com/products/category/" + selectedCategory)
         .then(function (response) {
           setProducts(response.data.products);
-          console.log(response.data.products);
+          //console.log(response.data.products);
         })
         .catch(function (error) {
-          console.error("Error fetching data:", error);
+          //console.error("Error fetching data:", error);
         });
     } else {
       axios
@@ -32,7 +32,7 @@ export default function Ropa() {
     }
   }, [selectedCategory]);
 
-  console.log(products);
+  //console.log(products);
 
   if (products == null) {
     return <div>Loading...</div>;
@@ -48,7 +48,7 @@ export default function Ropa() {
             >
               <div className="block-4 text-center border">
                 <figure className="block-4-image">
-                  <Link to={"/shop_single" + element.id}>
+                  <Link to={"/shop_single/" + element.id}>
                     <img
                       src={element.thumbnail}
                       alt="placeholder"

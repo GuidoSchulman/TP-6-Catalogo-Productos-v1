@@ -19,12 +19,6 @@ export default function OrderSummary() {
             <tbody>
               <tr>
                 <td>
-                  Top Up T-Shirt <strong className="mx-2">x</strong> 1
-                </td>
-                <td>$250.00</td>
-              </tr>
-              <tr>
-                <td>
                   Polo Shirt <strong className="mx-2">x</strong> 1
                 </td>
                 <td>$100.00</td>

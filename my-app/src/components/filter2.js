@@ -32,5 +32,5 @@ export default function Filter2() {
     );
   }
 }
-console.log(CategoriaContext);
+//console.log(CategoriaContext);
 export {CategoriaContext };

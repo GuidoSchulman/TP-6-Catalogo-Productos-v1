@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import Header from '../components/header'
 import InfoRopa from '../components/infoRopa'
-import Footer from '../components/footer'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-function Shop_Single(props) {
-  const { id } = useParams();
-  const [product,setProduct]= useState()
+const ShopSingle = (props)=> {
+    const { id } =  useParams();
+   
+  const [product,setProduct]= useState(null)
+
   useEffect(() => {
-    
+    console.log('idtest',id); 
       axios
         .get("https://dummyjson.com/products/" + id)
         .then(function (response) {
-          setProduct(response.data);
+           setProduct(response.data);
           console.log(response.data);
         })
         .catch(function (error) {
           console.error("Error fetching data:", error);
         });
 
-  },[1]);
+  },[id]);
+
+  //console.log(product);
   return (
     <>
     <body>
     <p>{id}</p>
-    <InfoRopa {...product}>
-
-    </InfoRopa>
+    
+    <InfoRopa product={product} />
    
     </body>
     </>
   )
 }
 
-Shop_Single.propTypes = {}
+ShopSingle.propTypes = {}
 
-export default Shop_Single
+export default ShopSingle
