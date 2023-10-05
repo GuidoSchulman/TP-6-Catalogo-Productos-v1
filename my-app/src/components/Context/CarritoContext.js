@@ -3,14 +3,14 @@ import React, { createContext, useEffect, useState } from 'react';
 export const CarritoContext = createContext();
 
 const CarritoProvider = (props) => {
-  const [RopaSeleccionada, setRopaSeleccionada] = useState([]); 
-console.log(RopaSeleccionada);
+  const [ProductoSeleccionado, setProductoSeleccionado] = useState([]); 
+console.log(ProductoSeleccionado);
   useEffect(() => {
   }, []);
 
   return (
     <CarritoContext.Provider 
-    value={{ RopaSeleccionada, setRopaSeleccionada }}>
+    value={{ ProductoSeleccionado, setProductoSeleccionado }}>
       {props.children}
     </CarritoContext.Provider>
   );

@@ -2,14 +2,14 @@ import React, { useContext } from 'react'
 import { CarritoContext } from './ropa'
 
 export default function Tabla() {
-  const{RopaSeleccionada}=useContext(CarritoContext)
-  console.log(RopaSeleccionada );
-  RopaSeleccionada.forEach(element => {
+  const{ProductoSeleccionado}=useContext(CarritoContext)
+  console.log(ProductoSeleccionado );
+  ProductoSeleccionado.forEach(element => {
     console.log(element);
   });
   return (
     
-    RopaSeleccionada.forEach(item => {
+    ProductoSeleccionado.forEach(item => {
       <div>a</div>
     })
     /*<>

@@ -3,10 +3,10 @@ import { CarritoContext } from '../components/Context/CarritoContext';
 
 export default function InfoRopa({ product }) {
  
-  const { setRopaSeleccionada } = useContext(CarritoContext);
+  const { setProductoSeleccionado } = useContext(CarritoContext);
 
   const AñadirACarrito = function () {
-    setRopaSeleccionada(product);
+    setProductoSeleccionado(product);
   };
 
   return (
