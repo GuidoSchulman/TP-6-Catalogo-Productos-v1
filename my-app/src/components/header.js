@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CarritoContext } from "./ropa";
 export default function Header() {
+  const {ProductoSeleccionado}=useContext(CarritoContext)
   return (
     <div>
       <div className="site-wrap">
@@ -128,7 +130,7 @@ export default function Header() {
                       <li>
                         <Link to="/cart">
                           <span className="icon icon-shopping_cart"></span>
-                          <span className="count">2</span>{" "}
+                          <span className="count">{ProductoSeleccionado.length}</span>{" "}
                         </Link>
                       </li>
                       <li className="d-inline-block d-md-none ml-md-0">
