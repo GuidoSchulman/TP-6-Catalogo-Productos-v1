@@ -36,10 +36,7 @@ export default function Tabla() {
  </td>
  <td>${element.producto.price}</td>
  <td>
-   <div className="input-group mb-3" style={{maxwidth: '120px'}}>
-    <p>{element.cant}</p>
-    
-   </div>
+ <p>{element.cantidad}</p>
 
  </td>
  <td>$49.00</td>
