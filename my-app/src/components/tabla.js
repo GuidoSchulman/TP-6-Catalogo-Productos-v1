@@ -37,13 +37,8 @@ export default function Tabla() {
  <td>${element.producto.price}</td>
  <td>
    <div className="input-group mb-3" style={{maxwidth: '120px'}}>
-     <div className="input-group-prepend">
-       <button className="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-     </div>
-     <input type="text" className="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"></input>
-     <div className="input-group-append">
-       <button className="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-     </div>
+    <p>{element.cant}</p>
+    
    </div>
 
  </td>

@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CarritoContext } from '../components/Context/CarritoContext';
 
 export default function InfoRopa({ product }) {
- 
+ const [count, setCount]=useState(0)
   const { agregarProducto } = useContext(CarritoContext);
 
+
   const AñadirACarrito = function () {
-    agregarProducto(product);
+    for (let index = 0; index < count; index++) {
+      console.log(count);
+      console.log(product);
+      agregarProducto(product,count)
+      
+    }
+    
   };
+
 
   return (
     <>
@@ -45,14 +53,14 @@ export default function InfoRopa({ product }) {
               <div className="input-group-prepend">
                 <button className="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
               </div>
-              <input type="text" className="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+              <input type="text" className="form-control text-center" value={count} placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
               <div className="input-group-append">
-                <button className="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                <button className="btn btn-outline-primary js-btn-plus" type="button" onClick={() => setCount(count + 1)}>+</button>
               </div>
             </div>
   
             </div>
-            <p><a className="buy-now btn btn-sm btn-primary" onClick={AñadirACarrito}>Add</a></p>
+            <p><button className="buy-now btn btn-sm btn-primary" onClick={AñadirACarrito}>Add</button></p>
   
           </div>
         </div>

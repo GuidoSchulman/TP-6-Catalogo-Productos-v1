@@ -14,7 +14,6 @@ const ShopSingle = (props)=> {
         .get("https://dummyjson.com/products/" + id)
         .then(function (response) {
            setProduct(response.data);
-          console.log(response.data);
         })
         .catch(function (error) {
           console.error("Error fetching data:", error);
