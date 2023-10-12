@@ -3,8 +3,10 @@ import React, { createContext, useEffect, useState } from "react";
 export const CarritoContext = createContext();
 
 const CarritoProvider = (props) => {
-  const [ProductoSeleccionado, setProductoSeleccionado] = useState([]);
-  const [countTotal, setCountTotal] = useState(0);
+  const ProductosIniciales = localStorage.getItem('productos') ? JSON.parse(localStorage.getItem('productos')) : [];
+  const cantTotal = parseInt(localStorage.getItem('cantProductos')) || 0;
+  const [ProductoSeleccionado, setProductoSeleccionado] = useState(ProductosIniciales);
+  const [countTotal, setCountTotal] = useState(cantTotal);
   console.log(countTotal);
   console.log(ProductoSeleccionado);
   useEffect(() => {}, []);
@@ -51,6 +53,14 @@ const CarritoProvider = (props) => {
     setCountTotal(countActual);
     setProductoSeleccionado(listaCopiada);
   };
+
+  useEffect(()=>{
+    localStorage.setItem('productos',JSON.stringify(ProductoSeleccionado))
+  },[ProductoSeleccionado])
+
+  useEffect(()=>{
+    localStorage.setItem('cantProductos',JSON.stringify(countTotal))
+  },[countTotal])
 
   return (
     <CarritoContext.Provider
