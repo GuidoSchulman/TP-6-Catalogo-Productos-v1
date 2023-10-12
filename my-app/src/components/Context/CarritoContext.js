@@ -17,8 +17,10 @@ const CarritoProvider = (props) => {
     );
     console.log(index);
     if (index !== -1) {
+      console.log("Previous",listaCopiada[index].cantidad);
+      console.log("Cant: ", cant);
       listaCopiada[index].cantidad = listaCopiada[index].cantidad + cant;
-      console.log(listaCopiada[index].cantidad);
+      console.log("After", listaCopiada[index].cantidad);
       CountActual = countTotal + cant;
       setCountTotal(CountActual);
       setProductoSeleccionado(listaCopiada);

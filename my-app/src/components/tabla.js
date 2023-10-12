@@ -16,10 +16,12 @@ export default function Tabla() {
     
 
     <>
+   
      <div className="site-section">
       <div className="container">
+      
         <div className="row mb-5">
-          <form className="col-md-12" method="post">
+        <center>
             <div className="site-blocks-table">
               <table className="table table-bordered">
                 <thead>
@@ -56,10 +58,12 @@ export default function Tabla() {
                 </tbody>
               </table>
             </div>
-          </form>
-        </div>
+           
+           </center></div>
+    
     </div>
     </div>
+    
     </>
    
   )
