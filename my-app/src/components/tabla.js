@@ -3,8 +3,15 @@ import { CarritoContext } from './ropa'
 
 export default function Tabla() {
   const {ProductoSeleccionado} =useContext(CarritoContext)
+  const {eliminarProducto}=useContext(CarritoContext)
   console.log(ProductoSeleccionado );
  
+  const Eliminar = function (prod) {
+    console.log(prod);
+    eliminarProducto(prod)
+    
+  };
+
   return (
     
 
@@ -40,7 +47,7 @@ export default function Tabla() {
 
  </td>
  <td>$49.00</td>
- <td><a href="#" className="btn btn-primary btn-sm">X</a></td>
+ <td><button onClick={() => Eliminar(element.producto)}>X</button></td>
 </tr>
 
 
